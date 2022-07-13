@@ -34,6 +34,9 @@ conda activate bert4gcn
 bash sctipts/build_env.sh
 ```
 
+Download [glove.840B.300d.zip](https://nlp.stanford.edu/projects/glove/) and unzip to glove/
+
+
 Parse dependency graph
 ```bash
 bash scripts/preprocess.sh
