@@ -1,0 +1,21 @@
+_target_: src.models.bert4gcn.BERT4GCN
+
+inputs_cols: ["input_ids", "attention_mask", "token_type_ids", "dependency_graph", "token_starts", "token_start_mask",
+              "text_raw_indices", "aspect_in_text", "aspect_in_text_mask"]
+model_name_or_path: 'bert-base-uncased'
+bert_layer: [1,5,9,12]
+embed_dim: 300
+hidden_dim: 300
+gnn_drop: 0.5
+guidance_drop: 0.5
+bert_dim: 768
+upper: 0.25
+lower: 0.01
+window: 3
+freeze_emb: True
+
+# training
+bert_learning_rate: 0.00002
+others_learning_rate: 0.001
+warmup_ratio: 0.1
+weight_decay: 0.01

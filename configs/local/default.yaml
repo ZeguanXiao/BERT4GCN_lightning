@@ -1,0 +1,11 @@
+# @package _global_
+
+#data_dir: "/root/autodl-tmp/data"
+#cache_dir: "/root/autodl-tmp/cache"
+
+hydra:
+  run:
+    dir: /root/autodl-tmp/logs/experiments/runs/${name}/${now:%Y-%m-%d}_${now:%H-%M-%S}
+  sweep:
+    dir: /root/autodl-tmp/logs/experiments/multiruns/${name}/${now:%Y-%m-%d}_${now:%H-%M-%S}
+    subdir: ${hydra.job.num}

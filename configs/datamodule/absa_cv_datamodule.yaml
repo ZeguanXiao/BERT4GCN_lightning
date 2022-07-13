@@ -1,0 +1,11 @@
+_target_: src.datamodules.absa_kfold_datamodule.ABSADataModule
+
+data_dir: ${data_dir}
+cache_dir: ${cache_dir}
+dataset: "laptop"
+batch_size: 32
+num_workers: 0
+pin_memory: False
+max_len: 128
+stratify: False
+n_splits: 10
